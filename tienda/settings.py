@@ -75,10 +75,16 @@ WSGI_APPLICATION = 'tienda.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/5.1/ref/settings/#databases
 
+
+# mysql://root:cxrgHraiEvHrhrlfplfgTYvUwiXVtDnL@ballast.proxy.rlwy.net:11403/railway
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+        'ENGINE': 'django.db.backends.mysql',
+        'NAME': 'railway',  # Nombre de tu base de datos
+        'USER': 'root',  # Usuario de MySQL
+        'PASSWORD': 'cxrgHraiEvHrhrlfplfgTYvUwiXVtDnL',  # Contraseña de MySQL
+        'HOST': 'ballast.proxy.rlwy.net',  # Servidor de la base de datos
+        'PORT': '11403',  # Puerto por defecto de MySQL
     }
 }
 
